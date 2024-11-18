@@ -4,8 +4,8 @@ import 'package:islami_c12_maadi/quran_details/quran_details_screen.dart';
 import 'package:islami_c12_maadi/style/AppStyle.dart';
 
 import 'ahadeth_details/ahadeth_details_screen.dart';
-import 'home/home_screen.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islami_c12_maadi/home/home_screen.dart';
+
 void main() {
   // hello world
   runApp(const MyApp());
@@ -22,9 +22,8 @@ class MyApp extends StatelessWidget {
       theme: AppStyle.lightTheme,
       darkTheme:AppStyle.darkTheme ,
       themeMode: ThemeMode.dark,
-      initialRoute: HomeScreen.routeName,
+      initialRoute: Homescreen.routeName,
       localizationsDelegates: [
-        AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
@@ -35,7 +34,7 @@ class MyApp extends StatelessWidget {
       ],
       locale: Locale("ar"),
       routes: {
-        HomeScreen.routeName:(_)=>HomeScreen(),
+        Homescreen.routeName:(_)=>Homescreen(),
         QuranDetailsScreen.routeName :(_)=> QuranDetailsScreen(),
         AhadethDetailsScreen.routeName:(_)=>AhadethDetailsScreen()
       },
